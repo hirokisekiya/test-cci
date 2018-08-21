@@ -64,12 +64,9 @@ set :use_sudo, false
 
 server "ec2-52-14-51-147.us-east-2.compute.amazonaws.com",
 user: "ec2-user",
-roles: %w{web app}
-# roles: %w{web app},
-# ssh_options: {
-#   user: "ec2-user",
-#   keys: %w(~/.ssh/test-cci.pem),
-#   forward_agent: false,
-#   auth_methods: %w(publickey),
-#   # password: ""
-# }
+roles: %w{web app},
+ssh_options: {
+  user: "ec2-user",
+  forward_agent: false,
+  auth_methods: %w(publickey),
+}

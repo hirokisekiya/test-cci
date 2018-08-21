@@ -67,7 +67,7 @@ user: "ec2-user",
 roles: %w{web app},
 ssh_options: {
   user: "ec2-user",
-  keys: %w(~/.ssh/id_rsa),
+  keys: %w(~/.ssh/authorized_keys),
   forward_agent: false,
   auth_methods: %w(publickey),
   # password: ""
